@@ -8,16 +8,18 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/tools-css/parse-code.css" />
 
-    <title>Website Speed Test Tool : Check Your Site's Speed</title>
+    <title>HTML to XML Parse Code Converter for Blogger</title>
     <meta
       name="description"
-      content="Test you website spped for free. Website Speed checker | Free SEO Tool" />
+      content="Convert your HTML code to Parse code for Blogger Template | You can use this code in your Blogger XML Template without any error." />
 
     <link
       rel="shortcut icon"
       href="/assets/images/favicon.png"
       type="image/x-icon" />
+
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
@@ -73,61 +75,105 @@
     </header>
     <!-- ***** Header Area End ***** -->
     <div class="page-heading header-text">
-      <h1 id="main-title">Website Speed Checker</h1>
+      <h1 id="main-title">HTML Parse Code Converter (Blogger Parse Code)</h1>
     </div>
 
     <!-- Main Tool -->
     <div id="tool-box" class="section container">
-      <iframe
-        width="100%"
-        height="500"
-        allowtransparency="true"
-        frameborder="0"
-        id="a90e74"
-        scrolling="no"
-        src="https://bailey.sh/demo/seostudio/embed?id=speed-test&r=a90e74&cookies=0"
-        allow="clipboard-write"></iframe>
+      <div>
+        <div id="parser2">
+          <textarea
+            id="somewhere"
+            placeholder="Write/paste the code here then click the Parse Code button"></textarea>
 
-      <script type="text/javascript">
-        (function (id) {
-          var eventMethod = window.addEventListener
-              ? "addEventListener"
-              : "attachEvent",
-            lh = -1;
+          <div
+            class="alert alert-success margin-bottom-20 collapse"
+            id="btnInfo"
+            role="alert">
+            <button
+              class="close close-copy"
+              onclick='document.getElementById("btnInfo").style.display = "none";cdClear();'
+              type="button">
+              <span aria-hidden="true">×</span>
+            </button>
 
-          window[eventMethod](
-            eventMethod == "attachEvent" ? "onmessage" : "message",
-            function (e) {
-              if (e.data.indexOf(id + ":") != 0) return;
-              var h = parseInt(e.data.substring(id.length + 1), 10);
+            <h4>Code copied to clipboard</h4>
+          </div>
 
-              if (lh != h) document.getElementById(id).style.height = h + "px";
-              lh = h;
-            },
-            false
-          );
-        })("a90e74");
-      </script>
-      <br />
+          <br />
+          <button
+            class="btn btn-primary btn-sm btn-parse"
+            onclick="convert();"
+            type="button">
+            Parse Code
+          </button>
 
+          <div class="clear"></div>
+
+          <button
+            class="btn button-link btn-xs btn-info"
+            data-clipboard-action="copy"
+            data-clipboard-target="#somewhere"
+            id="button-link"
+            type="submit">
+            Copy code to clipboard
+          </button>
+          <button
+            class="btn btn-danger btn-xs"
+            id="btn_clear"
+            onclick="cdClear();">
+            Clean
+          </button>
+        </div>
+
+        <script type="text/javascript">
+          //<![CDATA[
+
+          function downloadJSAtOnload() {
+            var d = document.createElement("script");
+            (d.src =
+              "https://cdn.jsdelivr.net/gh/Arlina-Design/redvision@master/htmlparse.js"),
+              document.body.appendChild(d);
+          }
+          window.addEventListener
+            ? window.addEventListener("load", downloadJSAtOnload, !1)
+            : window.attachEvent
+            ? window.attachEvent("onload", downloadJSAtOnload)
+            : (window.onload = downloadJSAtOnload);
+
+          //]]>
+        </script>
+      </div>
+      <br /><br /><br />
       <div id="tool-detail">
+        <h3>Free HTML to XML Parser Code Converter</h3>
         <p>
-          <strong>Website Speed Test Tool</strong> can be very helpful to
-          analyze your website's loading speed (how fast your site gets loaded)
-          and optimize it to make it fast. It will also give the complete report
-          about all types of content (e.g., scripts, images, documents, etc.)
-          size present on your site. This online tool is completely free to use.
+          The HTML to XML Parse Code Converter is a free online tool to convert
+          your HTML, CSS, or JavaScript code into Parse code. You can use the
+          converted parser code in your Blogger template without any problem.
         </p>
         <br />
-        <h3>How to Use?</h3>
+        <h3>How to use it?</h3>
         <ul>
           <li>
+            <p>Simply copy and paste your HTML code into the text field.</p>
+          </li>
+          <li>
             <p>
-              Enter your website link (e.g., https://example.com or example.com)
+              Next, press the button "Parse Code". It will now parse the code
+              you provided in the same text field.
             </p>
           </li>
-          <li><p>Click on the submit button</p></li>
-          <li><p>Select your targated location and then click test.</p></li>
+          <li>
+            <p>
+              Now simply copy the code by pressing the "Copy Code to Clipboard"
+              button. You may utilize the entire code in your code box, Blogger
+              template.
+            </p>
+          </li>
+          <li>
+            <p>If you want to use it again, simply click the "Clear" button.</p>
+          </li>
         </ul>
       </div>
     </div>
