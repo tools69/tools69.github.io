@@ -81,35 +81,37 @@
 
     <!-- Main Tool -->
     <div id="tool-box" class="section container">
-      <iframe
-        allowtransparency="true"
-        frameborder="0"
-        height="200"
-        id="cfeb6c"
-        scrolling="no"
-        src="https://bailey.sh/demo/seostudio/embed.php?id=new-backlinks&amp;h=0&amp;r=cfeb6c"
-        width="1100"></iframe>
-
-      <script type="text/javascript">
-        (function (id) {
-          var eventMethod = window.addEventListener
-              ? "addEventListener"
-              : "attachEvent",
-            lh = -1;
-
-          window[eventMethod](
-            eventMethod == "attachEvent" ? "onmessage" : "message",
-            function (e) {
-              if (e.data.indexOf(id + ":") != 0) return;
-              var h = parseInt(e.data.substring(id.length + 1), 10);
-
-              if (lh != h) document.getElementById(id).style.height = h + "px";
-              lh = h;
-            },
-            false
-          );
-        })("cfeb6c");
-      </script>
+      <div>
+        <iframe
+          allowtransparency="true"
+          frameborder="0"
+          height="200"
+          id="cfeb6c"
+          scrolling="no"
+          src="https://bailey.sh/demo/seostudio/embed.php?id=new-backlinks&amp;h=0&amp;r=cfeb6c"
+          width="1100"></iframe>
+  
+        <script type="text/javascript">
+          (function (id) {
+            var eventMethod = window.addEventListener
+                ? "addEventListener"
+                : "attachEvent",
+              lh = -1;
+  
+            window[eventMethod](
+              eventMethod == "attachEvent" ? "onmessage" : "message",
+              function (e) {
+                if (e.data.indexOf(id + ":") != 0) return;
+                var h = parseInt(e.data.substring(id.length + 1), 10);
+  
+                if (lh != h) document.getElementById(id).style.height = h + "px";
+                lh = h;
+              },
+              false
+            );
+          })("cfeb6c");
+        </script>
+      </div>
       <br />
       <div id="tool-detail">
         <h3>Backlink Checker: What is it?</h3>
